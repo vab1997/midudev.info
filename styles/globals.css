@@ -1,3 +1,18 @@
+:root {
+  --app-background-color: #fefefe;
+  --app-background-secondary-color: #fafafa;
+  --app-border-color: #000;
+  --app-shadow-color: #d2effd;
+  --app-selection-color: #6cd0ff;
+  --app-background:
+    radial-gradient(#cdd0ff 1px, transparent 0),
+    radial-gradient(#cdd0ff 1px,#fefefe 0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
@@ -6,11 +21,15 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+  background-color: var(--app-background-color);
+  background-image: var(--app-background);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  color: var(--text-base-color);
+}
+
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
