@@ -1,0 +1,51 @@
+.profileContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.profilePicture {
+    max-width: 80vw;
+    max-height: 50vh;
+}
+
+.section {
+    padding: 0 1rem;
+}
+
+.content {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+}
+
+.content h1 {
+    font-size: 2rem;
+}
+.content h2 {
+    font-size: 1.7rem;
+}
+.content p {
+    font-size: 1.3rem;
+}
+
+.anchor {
+    text-decoration: underline;
+}
+
+.anchor:hover {
+    opacity: .7;
+}
+
+@media (max-width: 767px) {
+    .profileContainer {
+        padding: 4rem 0 0 0;
+    }
+}
