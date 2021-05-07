@@ -1,0 +1,31 @@
+.sectionContainer {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.sectionContainer h1 {
+    padding: 0 1rem;
+}
+
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.containerVideos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.3vw;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .grid {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
