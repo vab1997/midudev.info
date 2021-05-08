@@ -39,8 +39,8 @@
     white-space: nowrap;
 }
 
-.anchor:hover {
-    text-decoration: underline;
+.navbarRight a:hover {
+    opacity: .6;
 }
 
 .navLogo {

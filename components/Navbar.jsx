@@ -24,21 +24,21 @@ export default function Navbar () {
             </Link>
           </div>
           <div className={styles.navbarRight}>
-            <Link href='https://www.youtube.com/c/midudev?sub_confirmation=1'>
-              <a>
+            <div>
+              <a href='https://www.youtube.com/c/midudev?sub_confirmation=1' target='_blanck' rel='noreferret'>
                 <IconYoutube width={32} height={32} />
               </a>
-            </Link>
-            <Link href='https://www.twitch.tv/midudev'>
-              <a>
+            </div>
+            <div>
+              <a href='https://www.twitch.tv/midudev' target='_blanck' rel='noreferret'>
                 <IconTwitch width={24} height={24} />
               </a>
-            </Link>
-            <Link href='https://twitter.com/midudev'>
-              <a>
+            </div>
+            <div>
+              <a href='https://twitter.com/midudev' target='_blanck' rel='noreferret'>
                 <IconTwitter width={24} height={24} />
               </a>
-            </Link>
+            </div>
           </div>
         </div>
       </nav>

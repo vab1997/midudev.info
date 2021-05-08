@@ -18,7 +18,7 @@ export default function Profile () {
             Tiene un canal de {' '}
             <a className={styles.anchor} href='https://www.youtube.com/c/midudev?sub_confirmation=1' target='_blank' rel='nofollow noopener noreferrer'>Youtube</a>{' '}
             donde tiene varios cursos gratis que tiene un contenido muy bueno que te ayudará a comprender muchos
-            conceptos a cerca de como funciona las cosas por debajo.
+            conceptos acerca de cómo funcionan las cosas por debajo.
           </p>
         </div>
       </section>

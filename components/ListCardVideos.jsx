@@ -4,7 +4,7 @@ import CardVideo from './CardVideo'
 export default function ListCardVideos ({ videos }) {
   return (
     <section className={styles.sectionContainer}>
-      <h1>Ultimos videos de Youtube</h1>
+      <h1>Últimos videos de Youtube</h1>
       <div className={styles.grid}>
         <div className={styles.containerVideos}>
           {videos && videos.map(({ urlVideo, title, url, description }) => (
