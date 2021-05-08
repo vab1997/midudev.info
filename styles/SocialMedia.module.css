@@ -1,0 +1,39 @@
+.sectionContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.sectionContainer h1 {
+    padding: 0 1rem;
+}
+
+.containerIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+}
+
+.containerIcon div {
+    padding: .5rem 2rem;
+}
+
+.containerIcon div:hover {
+    
+    opacity: .8;
+}
+
+@media (max-width: 767px) {
+    .containerIcon div {
+        padding: .5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .containerIcon {
+        flex-direction: column;
+    }
+}
