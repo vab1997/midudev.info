@@ -1,5 +1,5 @@
-const KEY = 'AIzaSyDZTov_forXNDd-KATNVChJweLzYcxx61s'
-const CHANNEL_ID = 'UC8LeXCWOalN8SxlrPcG-PaQ'
+const KEY = process.env.KEY
+const CHANNEL_ID = process.env.CHANNEL_ID
 
 async function mapFromApiResponseToVideos (apiResponse) {
   const URL_EMBED = 'https://www.youtube.com/embed/'
