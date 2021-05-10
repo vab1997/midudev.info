@@ -2,16 +2,19 @@ const KEY = 'AIzaSyDZTov_forXNDd-KATNVChJweLzYcxx61s'
 const CHANNEL_ID = 'UC8LeXCWOalN8SxlrPcG-PaQ'
 
 async function mapFromApiResponseToVideos (apiResponse) {
-  const URL = 'https://www.youtube.com/embed/'
+  const URL_EMBED = 'https://www.youtube.com/embed/'
+  const URL_VIDEO = 'https://www.youtube.com/watch?v='
   const result = await apiResponse.then(res => {
     return res
   })
+
   return result.map(({ id, snippet }) => {
     const { videoId } = id
-    const urlVideo = `${URL}${videoId.replace(/['"]+g/, '')}`
+    const urlVideo = `${URL_VIDEO}${videoId.replace(/['"]+g/, '')}`
+    const urlVideoEmbed = `${URL_EMBED}${videoId.replace(/['"]+g/, '')}`
     const { title, description, thumbnails } = snippet
     const { high: { url } } = thumbnails
-    return { urlVideo, title, description, url }
+    return { urlVideoEmbed, urlVideo, title, description, url }
   })
 }
 

@@ -20,6 +20,18 @@ export default function Profile () {
             donde tiene varios cursos gratis que tiene un contenido muy bueno que te ayudará a comprender muchos
             conceptos acerca de cómo funcionan las cosas por debajo.
           </p>
+          <p>
+            También puedes sumarte a los stream en Twitch, donde está en vivo 3 dias a la semana:
+            <li>
+              <strong>Lunes</strong>: JavaScript Weekly, comentando las nuevas noticias de JavaScript.
+            </li>
+            <li>
+              <strong>Viernes</strong>: Aprendiendo, normalmente se prueban nuevas tecnologias o algo que se haya propuesto en Discord.
+            </li>
+            <li>
+              <strong>Domingo</strong>: Bootcamp FullStack Gratuito.
+            </li>
+          </p>
         </div>
       </section>
     </>

@@ -1,5 +1,6 @@
 import Layout from 'components/Layout'
 import ListCardVideos from 'components/ListCardVideos'
+import ListCoursesYoutube from 'components/ListCoursesYoutbe'
 import Profile from 'components/Profile'
 import SocialMedia from 'components/SocialMedia'
 
@@ -10,6 +11,7 @@ export default function Home ({ videos }) {
     <Layout>
       <Profile />
       <SocialMedia />
+      <ListCoursesYoutube />
       <ListCardVideos videos={videos} />
     </Layout>
   )
