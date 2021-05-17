@@ -1,13 +1,11 @@
 import Layout from 'components/Layout'
 import ListCardVideos from 'components/ListCardVideos'
-import ListCardVideosTwitch from 'components/ListCardVideosTwitch'
 import ListCoursesYoutube from 'components/ListCoursesYoutbe'
 import SocialMedia from 'components/SocialMedia'
 
 import getYoutubeVideos from 'services/getYoutubeVideos'
-import getTwitchVideos from 'services/getTwitchVideos'
 
-export default function Home ({ videosYoutube, videosTwitch }) {
+export default function Home ({ videosYoutube }) {
   return (
     <Layout>
       <h1 className='title'>Bienvenido a Midudev.info</h1>
@@ -15,19 +13,16 @@ export default function Home ({ videosYoutube, videosTwitch }) {
       <ListCoursesYoutube />
       <ListCardVideos videos={videosYoutube} />
       <SocialMedia />
-      {/* <ListCardVideosTwitch videos={videosTwitch} /> */}
     </Layout>
   )
 }
 
 export async function getStaticProps () {
   const videosYoutube = await getYoutubeVideos()
-  const videosTwitch = await getTwitchVideos()
 
   return {
     props: {
-      videosYoutube,
-      videosTwitch
+      videosYoutube
     }
   }
 }
