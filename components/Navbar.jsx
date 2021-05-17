@@ -25,6 +25,13 @@ export default function Navbar () {
           </div>
           <div className={styles.navbarRight}>
             <div>
+              <Link href='/whoIsMidudev'>
+                <a className={styles.link}>
+                  Quien es Midudev?
+                </a>
+              </Link>
+            </div>
+            <div>
               <a href='https://www.youtube.com/c/midudev?sub_confirmation=1' target='_blanck' rel='noreferret'>
                 <IconYoutube width={32} height={32} />
               </a>

@@ -11,7 +11,7 @@ export default function Profile () {
           </div>
         </div>
         <div className={styles.content}>
-          <h1 className='title'>Miguel Ángel Durán</h1>
+          <h1>Miguel Ángel Durán</h1>
           <h2>Creador de Contenido sobre JavaScript, React.js, Next.js, y más.</h2>
           <p>
             Midudev es un creador de contenido sobre Desarrollo Web, especialmente sobre JavaScript con un amplio conocimiento y experiencia.

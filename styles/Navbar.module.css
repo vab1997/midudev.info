@@ -60,11 +60,29 @@
     opacity: 0.7;
 }
 
+.link {
+    font-size: 1.2rem;
+}
+
 @media (max-width: 767px) {
     .navbarContainer {
         padding: 0;
     }
     .navbarLeft {
         padding: 0;
+    }
+}
+
+@media (max-width: 570px) {
+    .navbarContainer {
+        flex-direction: column;
+        height: auto;
+    }
+    .navbarLeft {
+        align-items: center;
+        justify-content: center;
+    }
+    .navbarRight {
+        display: none;
     }
 }

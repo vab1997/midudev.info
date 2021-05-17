@@ -33,3 +33,24 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.title {
+  font-size: 3rem;
+}
+
+.subtitle {
+  padding: 0 2.5rem;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 2.3rem;
+    margin-top: 7rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}
