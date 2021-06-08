@@ -20,7 +20,7 @@ async function mapFromApiResponseToVideos (apiResponse) {
 
 export default async function getYoutubeVideos () {
   const url =
-    `https://www.googleapis.com/youtube/v3/search?key=${KEY}=&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=6`
+    `https://www.googleapis.com/youtube/v3/search?key=${KEY}=&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=3`
 
   const apiResponse = fetch(url)
     .then(res => res.ok ? res.json() : [])
