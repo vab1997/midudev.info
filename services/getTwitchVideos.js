@@ -12,7 +12,7 @@ async function mapFromApiResponseToVideos (apiResponse) {
     return { id: _id, views, title, description, url, urlVideoEmbed, large }
   })
 
-  return [1, 2, 3].map((index) => resultsVideos[index])
+  return [0, 1, 2].map((index) => resultsVideos[index])
 }
 
 export default async function getTwitchVideos () {
