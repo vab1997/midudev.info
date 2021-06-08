@@ -7,7 +7,7 @@ export default function Profile () {
       <section className={styles.section}>
         <div className={styles.profileContainer}>
           <div className={styles.profilePicture}>
-            <ProfilePicture width={300} height={300} />
+            <ProfilePicture width={200} height={200} />
           </div>
         </div>
         <div className={styles.content}>

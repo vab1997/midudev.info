@@ -13,11 +13,12 @@ export default function Navbar () {
           <div className={styles.navbarLeft}>
             <Link href='/'>
               <a className={styles.navLogo} title='midudev'>
-                <Image
+                <img
+                  className={styles.logo}
                   src='/logo.webp'
                   alt='logo Midudev'
-                  width={500}
-                  height={500}
+                  width={200}
+                  height={200}
                   loading='eager'
                 />
               </a>
