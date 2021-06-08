@@ -6,14 +6,14 @@ import styles from 'styles/Layout.module.css'
 export default function Layout ({
   children,
   title = 'Info Midudev',
-  description = 'Website sobre Información de Midudev'
+  description = 'sitio web sobre Información de Midudev'
 }) {
   return (
     <>
       <Head>
         <meta charSet='UTF-8' />
         <title>{title}</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/favicon1.ico' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='description' content={description} />
         <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
