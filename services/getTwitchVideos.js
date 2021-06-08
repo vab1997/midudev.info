@@ -1,4 +1,6 @@
-// 422915264
+const URL_PARENT = process.env.URL_PARENT
+const CLIENT_ID_TWITCH = process.env.CLIENT_ID_TWITCH
+
 async function mapFromApiResponseToVideos (apiResponse) {
   const result = await apiResponse.then(res => {
     return res
@@ -6,7 +8,7 @@ async function mapFromApiResponseToVideos (apiResponse) {
 
   const resultsVideos = result.map(({ title, url, description, preview, views, _id }) => {
     const { large } = preview
-    const urlVideoEmbed = `https://player.twitch.tv/?video=${_id}&parent=localhost&autoplay=false`
+    const urlVideoEmbed = `https://player.twitch.tv/?video=${_id}&parent=${URL_PARENT}&autoplay=false`
     return { id: _id, views, title, description, url, urlVideoEmbed, large }
   })
 
@@ -21,7 +23,7 @@ export default async function getTwitchVideos () {
     headers: {
       Authorization: 'Bearer dseodycshskzl856aq03h2e2s65lf2',
       Accept: 'application/vnd.twitchtv.v5+json',
-      'Client-Id': 'of3sztfqiat214o3svlfm888zm9q51'
+      'Client-Id': `${CLIENT_ID_TWITCH}`
     }
   })
     .then(res => res.ok ? res.json() : [])
