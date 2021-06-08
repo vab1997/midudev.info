@@ -1,20 +1,21 @@
 import styles from 'styles/CardVideo.module.css'
 
-export default function CardVideo ({ urlVideoEmbed, urlVideo, title, description }) {
+export default function CardVideoTwitch ({ urlVideoEmbed, urlVideo, title, description, views }) {
   return (
     <div className={styles.card}>
       <div className={styles.video}>
         <iframe
           src={urlVideoEmbed}
+          height='378'
+          width='620'
           frameBorder='0'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          allowFullScreen
         />
       </div>
       <a href={urlVideo} target='_blank' rel='noreferrer'>
         <h2>{title}</h2>
       </a>
-      <p>{description}</p>
+      <p>{description || ''}</p>
+      <p>Views: {views}</p>
     </div>
   )
 }

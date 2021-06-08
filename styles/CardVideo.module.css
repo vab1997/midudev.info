@@ -26,12 +26,18 @@
 }
 
 .card h2 {
-    margin: 0 0 1rem 0;
-    font-size: 1rem;
-  }
-  
-  .card p {
-    margin: 0;
-    font-size: .8rem;
-    line-height: 1.5;
-  }
+margin: 0 0 1rem 0;
+font-size: 1rem;
+}
+
+.card p {
+margin: 0;
+font-size: .8rem;
+line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+    .video {
+        margin-bottom: 28px;
+    }
+}
