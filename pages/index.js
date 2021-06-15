@@ -12,7 +12,7 @@ export default function Home ({ videosYoutube, videosTwitch }) {
   return (
     <Layout>
       <h1 className='title'>Bienvenido a Midudev.info</h1>
-      <ProfilePicture width={300} height={300} />
+      <ProfilePicture width={400} height={400} />
       <h3 className='subtitle'>El sitio web donde encontraras toda la información acerca de las ultimas actividades de Midudev</h3>
       <SocialMedia />
       <ListCoursesYoutube />
@@ -22,7 +22,7 @@ export default function Home ({ videosYoutube, videosTwitch }) {
   )
 }
 
-export async function getServerSideProps () {
+export async function getStaticProps () {
   const videosYoutube = await getYoutubeVideos()
   const videosTwitch = await getTwitchVideos()
 

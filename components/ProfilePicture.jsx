@@ -1,5 +1,6 @@
 import css from 'styled-jsx/css'
 import Image from 'next/image'
+import imageProfile from 'public/midudev-tutor.webp'
 
 export default function ProfilePicture ({ width = 500, height = 500 }) {
   return (
@@ -12,12 +13,13 @@ export default function ProfilePicture ({ width = 500, height = 500 }) {
         </defs>
       </svg>
       <Image
-        src='/midudev-tutor.webp'
+        src={imageProfile}
         className='profile-picture'
         alt='midudev'
         width={width}
         height={height}
         loading='eager'
+        placeholder='blur'
       />
       <style global jsx>
         {styles}
