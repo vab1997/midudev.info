@@ -4,6 +4,7 @@ import styles from 'styles/Navbar.module.css'
 import IconTwitch from './icons/IconTwitch'
 import IconTwitter from './icons/IconTwitter'
 import IconYoutube from './icons/IconYoutube'
+import logoMidudev from 'public/logo.webp'
 
 export default function Navbar () {
   return (
@@ -13,13 +14,14 @@ export default function Navbar () {
           <div className={styles.navbarLeft}>
             <Link href='/'>
               <a className={styles.navLogo} title='midudev'>
-                <img
+                <Image
                   className={styles.logo}
-                  src='/logo.webp'
+                  src={logoMidudev}
                   alt='logo Midudev'
                   width={200}
                   height={200}
                   loading='eager'
+                  placeholder='blur'
                 />
               </a>
             </Link>
@@ -28,7 +30,7 @@ export default function Navbar () {
             <div>
               <Link href='/whoIsMidudev'>
                 <a className={styles.link}>
-                  Quien es Midudev?
+                  ¿Quien es Midudev?
                 </a>
               </Link>
             </div>
