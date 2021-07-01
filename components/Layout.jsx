@@ -2,6 +2,7 @@ import Footer from './Footer'
 import Head from 'next/head'
 import Navbar from './Navbar'
 import styles from 'styles/Layout.module.css'
+import ScrollToTop from './ScrollToTop'
 
 export default function Layout ({
   children,
@@ -32,6 +33,7 @@ export default function Layout ({
       <main className={styles.main}>
         {children}
       </main>
+      <ScrollToTop showButtonAt={300} />
       <Footer />
     </>
   )
