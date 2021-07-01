@@ -1,17 +1,18 @@
-const KEY = process.env.KEY
-const CHANNEL_ID = process.env.CHANNEL_ID
+const { KEY_YOUTUBE, CHANNEL_ID, URL_EMBED, URL_VIDEO } = require('config/index')
+
+
+function removeQuotes (params) {
+  return params.replace(/['"]+g/, '')
+}
 
 async function mapFromApiResponseToVideos (apiResponse) {
-  const URL_EMBED = 'https://www.youtube.com/embed/'
-  const URL_VIDEO = 'https://www.youtube.com/watch?v='
-  const result = await apiResponse.then(res => {
-    return res
-  })
+  const result = await apiResponse
 
   return result.map(({ id, snippet }) => {
     const { videoId } = id
-    const urlVideo = `${URL_VIDEO}${videoId.replace(/['"]+g/, '')}`
-    const urlVideoEmbed = `${URL_EMBED}${videoId.replace(/['"]+g/, '')}`
+    const videoIdUrl = removeQuotes(videoId)
+    const urlVideo = `${URL_VIDEO}${videoIdUrl}`
+    const urlVideoEmbed = `${URL_EMBED}${videoIdUrl}`
     const { title, description, thumbnails } = snippet
     const { high: { url } } = thumbnails
     return { urlVideoEmbed, urlVideo, title, description, url }
@@ -20,11 +21,12 @@ async function mapFromApiResponseToVideos (apiResponse) {
 
 export default async function getYoutubeVideos () {
   const url =
-    `https://www.googleapis.com/youtube/v3/search?key=${KEY}=&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=3`
+    `https://www.googleapis.com/youtube/v3/search?key=${KEY_YOUTUBE}=&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=3`
 
   const apiResponse = fetch(url)
     .then(res => res.ok ? res.json() : [])
     .then(({ items }) => { return items })
+    .catch(e => console.error(e))
 
   return mapFromApiResponseToVideos(apiResponse)
 }

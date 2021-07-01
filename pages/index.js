@@ -11,20 +11,21 @@ import ProfilePicture from 'components/ProfilePicture'
 export default function Home ({ videosYoutube, videosTwitch }) {
   return (
     <Layout>
-      <h1 className='title'>Bienvenido a Midudev.info</h1>
       <ProfilePicture width={400} height={400} />
       <h3 className='subtitle'>El sitio web donde encontraras toda la información acerca de las ultimas actividades de Midudev</h3>
-      <SocialMedia />
       <ListCoursesYoutube />
       <ListCardVideos videos={videosYoutube} />
       <ListCardVideosTwitch videos={videosTwitch} />
+      <SocialMedia />
     </Layout>
   )
 }
 
 export async function getStaticProps () {
-  const videosYoutube = await getYoutubeVideos()
-  const videosTwitch = await getTwitchVideos()
+  const [videosYoutube, videosTwitch] = await Promise.all([
+    getYoutubeVideos(),
+    getTwitchVideos()
+  ])
 
   return {
     props: {

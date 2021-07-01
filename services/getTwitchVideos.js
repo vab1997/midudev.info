@@ -1,10 +1,7 @@
-const URL_PARENT = process.env.URL_PARENT
-const CLIENT_ID_TWITCH = process.env.CLIENT_ID_TWITCH
+const { URL_PARENT, REQUEST_HEAD } = require('config/index')
 
 async function mapFromApiResponseToVideos (apiResponse) {
-  const result = await apiResponse.then(res => {
-    return res
-  })
+  const result = await apiResponse
 
   const resultsVideos = result.map(({ title, url, description, preview, views, _id }) => {
     const { large } = preview
@@ -19,15 +16,10 @@ export default async function getTwitchVideos () {
   const url =
       'https://api.twitch.tv/kraken/channels/422915264/videos'
 
-  const apiResponse = fetch(url, {
-    headers: {
-      Authorization: 'Bearer dseodycshskzl856aq03h2e2s65lf2',
-      Accept: 'application/vnd.twitchtv.v5+json',
-      'Client-Id': `${CLIENT_ID_TWITCH}`
-    }
-  })
+  const apiResponse = fetch(url, REQUEST_HEAD)
     .then(res => res.ok ? res.json() : [])
     .then(data => { return data.videos })
+    .catch(e => console.error(e))
 
   return mapFromApiResponseToVideos(apiResponse)
 }
