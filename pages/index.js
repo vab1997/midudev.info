@@ -15,10 +15,10 @@ export default function Home ({ videosYoutube, videosTwitch }) {
         <ProfilePicture width={400} height={400} />
         <h3>El sitio web donde encontrarás toda la información acerca de las últimas actividades de midudev</h3> 
       </section>
+      <SocialMedia />
       <ListCoursesYoutube />
       <ListCardVideos videos={videosYoutube} />
       <ListCardVideosTwitch videos={videosTwitch} />
-      <SocialMedia />
     </Layout>
   )
 }

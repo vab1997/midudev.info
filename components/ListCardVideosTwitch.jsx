@@ -6,8 +6,8 @@ export default function ListCardVideosTwitch ({ videos }) {
   const { isNearScreen, fromRef } = useNearScreen({ distance: '350px' })
 
   return (
-    <section ref={fromRef} className={styles.sectionContainer}>
-      <h1>Últimos live en Twitch</h1>
+    <section className={styles.sectionContainer}>
+      <h1 ref={fromRef}>Últimos live en Twitch</h1>
       {isNearScreen &&
         <div className={styles.grid}>
           <div className={styles.containerVideos}>
