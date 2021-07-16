@@ -1,4 +1,4 @@
-const { URL_PARENT, REQUEST_HEAD } = require('config/index')
+import { REQUEST_HEAD, URL_PARENT } from 'config/index.js'
 
 async function mapFromApiResponseToVideos (apiResponse) {
   const result = await apiResponse

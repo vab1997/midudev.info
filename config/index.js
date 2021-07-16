@@ -1,4 +1,7 @@
-const { URL_PARENT, CLIENT_ID_TWITCH, CHANNEL_ID, KEY_YOUTUBE } = process.env
+const URL_PARENT = process.env.URL_PARENT
+const CLIENT_ID_TWITCH = process.env.CLIENT_ID_TWITCH
+const CHANNEL_ID = process.env.CHANNEL_ID
+const KEY_YOUTUBE = process.env.KEY_YOUTUBE
 
 const URL_EMBED = 'https://www.youtube.com/embed/'
 const URL_VIDEO = 'https://www.youtube.com/watch?v='

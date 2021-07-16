@@ -1,5 +1,4 @@
-const { KEY_YOUTUBE, CHANNEL_ID, URL_EMBED, URL_VIDEO } = require('config/index')
-
+import {KEY_YOUTUBE, CHANNEL_ID, URL_VIDEO, URL_EMBED } from 'config/index.js'
 
 function removeQuotes (params) {
   return params.replace(/['"]+g/, '')
